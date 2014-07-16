@@ -1,0 +1,128 @@
+<div ng-controller='ProductsCtrl'>
+    <div class='row'>
+        <div class='container'>
+            <div class='row margin-left-null margin-right-null'></div>
+            <div class='row margin-left-null margin-right-null' style='border:2px solid pink;'></div>
+            <div class='row margin-left-null margin-right-null' style='background-color:white;'>
+                <div class='col-md-3 ' style='border:2px solid green;'>
+                    <div class='padding-top-5 padding-bottom-15 margin-top-15 background-color-gray'>
+                        <form class='form-inline' role='form'>
+                            <div class='form-group from-group-sm'>
+                                <div class='col-sm-12'>
+                                <label>Search your items</label>
+                                <input type='text' class='form-control' placeholder='Search-items'>
+                                </div>                                  
+                            </div>                          
+                        </form>
+                    </div>
+                    <div class='margin-top-15' >
+                        <div class='col-md-12 background-color-gray'>
+                            <div class='padding-top-5 padding-bottom-5 margin-bottom-10 border-bottom-light-gray'>
+                                All Categories
+                            </div>
+                            <div class=''>
+                                <div class='col-md-6 padding-left-null'>
+                                    <div class='product-list'>
+                                        <ul class='list-group style-none'>
+                                            <li>
+                                                <a href="#">
+                                                    <span class='glyphicon glyphicon-phone product-list-glyphicon'>
+                                                    </span>
+                                                    <span class='product-data small'><strong>Mobile & tables</strong></span>
+                                                    <span></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>                                  
+                                </div>
+                                <div class='col-md-6'>
+                                    <div class='product-list'>
+                                        <ul class='list-group style-none'>
+                                            <li>
+                                                <a href="#">
+                                                    <span class='glyphicon glyphicon-phone product-list-glyphicon'>
+                                                    </span>
+                                                    <span class='product-data small'><strong>Mobile & tables</strong></span>
+                                                    <span></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-md-9' style='border:2px solid blue;'>
+                    <div class='row'>
+                        <div class='col-md-12'>
+                            <ul id='myTab' class='nav nav-tabs' role='tablist'>
+                                <li>
+                                    <a data-target="#long-view" role='tab' data-toggle='tab'>
+                                        All Ads
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-target="#image-view" role='tab' data-toggle='tab'>
+                                        Ads with Photos
+                                    </a>
+                                </li>
+                                <li class='pull-right'>
+                                    <a href="" class='disabled'>
+                                    <span>Sort by:</span>
+                                    <select class='btn-default'>
+                                        <option>latest</option>
+                                        <option>lower price</option>
+                                        <option>higher price</option>
+                                    </select>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div id='myTabContent' class='tab-content background-color-gray'>
+                                <div class='tab-pane fade in active' id='long-view'>
+                                    <div class='list-group'>
+                                        <a href="" class='list-group-item padding-left-null padding-right-null margin-bottom-10' ng-repeat='add in adds_list'>                            
+                                                <div class='media'>
+                                                    <div class='col-md-2'>
+                                                        <div href="" class='btn-link pull-left'>
+                                                            <img class='media-object'>
+                                                            <span class='{{add.imgUrl}} product-list-glyphicon'></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class='col-md-10 padding-left-null'>
+                                                        <div class='media-body'>
+                                                            <div class='col-md-9'>
+                                                                <h5 class='media-heading btn-link font-size-16'>{{add.Add_Heading}}</h5>
+                                                                <p class='small'>{{add.discription}}</p>
+                                                                <small>{{add.date}}<small> {{add.time}}</small></small>
+                                                            </div>
+                                                            <div class='col-md-3'><div class='pull-right'>{{add.price}}</div></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                        </a>
+                                        
+                                        <a href="" class='list-group-item'><h1>new heading</h1></a>
+                                    </div>                                    
+                                </div>
+                                <div class='tab-pane fade' id='image-view'></div>
+                            </div>
+                            <div align='center' class='border-top-light-gray'>                              
+                                <ul class='pagination'>
+                                        <li><a href="">
+                                            <span class='glyphicon glyphicon-chevron-left'></span> Previous
+                                        </a> </li>
+                                        <li><a href="" class='active'>1</a> </li>
+                                        <li><a href="">2</a> </li>
+                                        <li><a href="">Next Page <span class='glyphicon glyphicon-chevron-right'></span></a></li>
+                                </ul>                                   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

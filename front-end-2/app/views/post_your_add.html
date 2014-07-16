@@ -1,0 +1,334 @@
+<div class='container background-color-white' ng-controller='postYourAdds'>
+	<div class='row border-bottom-light-gray'>
+		<div class='col-md-12'>
+			<h3><strong>Post your Classified Ad:</strong><span class='pull-right font-size-12'>*Mandatory fields</span></h3>
+		</div>
+	</div>
+	<div>
+		<div >
+			<div class='col-md-1'></div>
+			<div class='col-md-11'>
+				<form role='form'>
+					<div class='row margin-top-15 margin-bottom-20'>
+						<label class='col-md-2'>
+							<small class='pull-right'>Photos:</small>
+						</label>
+						<div class='col-md-10 border-1' style='background-color:#FFFED4;'>
+							<h4 class='font-size-16' style='color:#ff6700;'>Ads with photos sell up to 5X more!</h4>
+							<div class='col-md-10' ng-file-drop>
+								<div class='row well my-drop-zone product-list' >
+									
+									<div ng-show='true'>
+										<div ng-file-over>
+											<div class='overflow-hiden col-md-4 margin-right-15 uploader-slot-first margin-bottom-15 disabled' style='background-color:white;'>
+												<span class='glyphicon glyphicon-camera product-list-glyphicon' ></span>
+												<div class='product-data'>
+													<strong class='font-size-16'>
+														+Add Photos
+													</strong>
+												</div>
+											</div>
+											<!-- <div class='col-md-2 margin-right-15 margin-bottom-15 disabled' style='border:1px solid gray; background-color:white;'>
+												<span class='glyphicon glyphicon-camera product-list-glyphicon-24' ></span>
+												<div class='product-data'>
+													<strong class=''>
+														+Add Photos
+													</strong>
+												</div>
+											</div> -->
+											<div ng-repeat='item in uploader.queue'>
+												<div class='col-md-2 margin-right-15 margin-bottom-15 padding-left-null padding-right-null disabled' style='border:1px solid gray; background-color:white; height:82px;'>
+
+													<div ng-show='!uploader.isHTML5'>
+														<span class='glyphicon glyphicon-camera product-list-glyphicon-24' ></span>
+														<div class='product-data'>
+															<strong class=''>
+																+Add Photos
+															</strong>
+														</div>
+													</div>
+													<div ng-show='uploader.isHTML5' ng-thumb='{file: item.file, height:100		}'>
+													</div>
+												</div>
+											</div>
+												
+										</div>
+									</div>
+									<input ng-file-select type='file' id='file' multiple class='overflow-hiden'>
+								</div>
+									
+							</div>
+							<div class='col-md-3'></div>
+						</div>
+					</div>
+					<div class='row margin-bottom-20'>
+						<label class='col-md-2'>
+							<span class='pull-right'>
+								<small>Chosen category:</small>
+							</span>
+						</label>
+						<div class='col-md-4'>
+							<div class='row margin-left-null margin-bottom-15'>
+								<span class='badge badge-color'>1</span>
+								<strong>Select a category:</strong>
+							</div>
+							<div class='row margin-left-null'>
+								<div class='list-group col-md-10'>
+									<div  ng-repeat='category in categories' class='list-group-item border-left-right-top btn-default padding-left-null' role='tab' data-toggle='tab' data-target='#{{category.targetId}}'>
+										<div class='media'>
+											<span class='{{category.imageUrl}} product-category-list-glyphicon'>
+											</span>	
+											<span class='font-color-blue'>
+												{{category.name}}
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>							
+						</div>
+						<div class='col-md-4'>
+							<div class='row margin-bottom-20'>
+								<span class='badge badge-color'>2</span>
+								<strong>Select a subcategory:</strong>
+							</div>
+							<div class='row margin-left-null'>
+								<div class='tab-content col-md-11 padding-left-null' >
+									<div class='tab-pane padding-left-null' id='{{category.targetId}}' ng-repeat='category in categories'>
+										<ul class='style-none list-group'>
+											<li  class='list-group-item border-left-right-top padding-left-null' ng-repeat='item in category.subCategory'>
+												<span class='font-color-blue'>
+													{{item}}
+												</span>
+											</li>
+										</ul>									
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class='row margin-top-15 margin-bottom-15'>
+						<label class='col-md-2'>
+							<div class='pull-right'>Type of add: *</div>
+						</label>
+						<div class='col-md-7'>
+							<div>
+								<label class='radio-inline'>
+									<input type='radio' name='optionsRadiosBuy' id='optionsRadiosSell' value='iWantToSell' checked>
+									i want to sell
+								</label>
+								<label class='radio-inline'>
+									<input type='radio' name='optionsRadiosBuy' id='optionsRadiosBuy' value='iWantToBuy'>
+									i want to buy
+								</label>								
+							</div>
+						</div>
+					</div>
+					<div class='row'>
+						<div class='form-group'>
+							<label class='col-md-2'>
+								<div class='pull-right'>
+									<small>Add title: *</small>
+								</div>
+							</label>
+							<div class='col-md-7 margin-bottom-15'>
+								<input type='text' class='form-control input-sm' placeholder='add title'>
+							</div>
+						</div>
+					</div>						
+					<div class='row'>
+						<div class='form-group'>
+							<label class='col-md-2'>
+								<div class='pull-right'>
+									<small>Type: *</small>
+								</div>
+							</label>
+							<div class='col-md-4 margin-bottom-15'>
+								<select class='form-control input-sm'>
+									<option>1</option>
+									<option>2</option>
+									<option>2</option>
+								</select>
+							</div>
+						</div>
+					</div>					
+					<div class='row'>
+						<div class='form-group'>
+							<label class='col-md-2'>
+								<small>Describe about your adv: *</small>
+							</label>
+							<div class='col-md-7'>
+								<textarea class='form-control margin-bottom-15' rows='3' placeholder='Add Discription'></textarea>
+							</div>
+						</div>
+					</div>					
+					<div class='row'>
+						<div class='form-group'>
+							<label class='col-md-2'>
+								<div class='pull-right'>Price: *</div>
+							</label>
+							<div class='col-md-6 margin-bottom-15'>
+								<div class='margin-bottom-15'>
+									<label class='radio-inline'>
+										<input type='radio' name='optionsRadios' id='optionsRadios1' value='fixedPrice' checked>
+										Fixed Price
+									</label>
+									<label class='radio-inline'>
+										<input type='radio' name='optionsRadios' id='optionsRadios2' value='negotiable'>
+										Negotiable
+									</label>
+									<label class='radio-inline'>
+										<input type='radio' name='optionsRadios' id='optionsRadios3' value='free'>
+										Donate/Free
+									</label>
+								</div>
+
+								<div class='col-md-6 padding-left-null'>
+									<div class='input-group'>
+										<div class='input-group-addon'>Rs.</div>
+										<input type='number' class='form-control input-sm' placeholder='Enter your price.'>
+									</div>
+										
+								</div>
+							</div>	
+						</div>
+					</div>
+					<div class='row border-bottom-light-gray border-top-light-gray'>
+						<h3 class='margin-top-10'>
+							<strong>Seller Information</strong>
+						</h3>
+					</div>
+					<div class='row'>
+						<div class='form-group'>
+							<label class='col-md-2 margin-top-15'>
+								<div class='pull-right'>
+									<small>Contact name: *</small>
+								</div>
+							</label>
+							<div class='col-md-7 margin-bottom-15 margin-top-15'>
+								<input type='text' class='form-control input-sm' placeholder='Name'>
+							</div>
+						</div>
+					</div>
+					<div class='row'>
+						<div class='form-group'>
+							<label class='col-md-2'>
+								<div class='pull-right'>
+									<small>Email: *</small>
+								</div>
+							</label>
+							<div class='col-md-7 margin-bottom-15'>
+								<input type='email' class='form-control input-sm' placeholder='Email address'>							
+								<span class='help-block'>							
+									<span class='glyphicon glyphicon-lock pull-left font-size-10'> your email won't be shared</span>
+								</span>
+							</div>
+						</div>
+					</div>	
+					<div class='row'>
+						<div class='form-group'>
+							<label class='col-md-2'>
+								<div class='pull-right'>
+									<small>Number:</small>
+								</div>
+							</label>
+							<div class='col-md-7 margin-bottom-15'>
+								<div>
+									<input type='number' class='form-control input-sm' placeholder='0XXXXXXXXXX'>
+								</div>
+								<div>
+									<label class='radio-inline'>
+										<input type='radio' name='optionRadiosNumber' id='optionsRadiosHideNumber' value='HideNumber' checked>
+										Hide number
+									</label>
+									<label class='radio-inline'>
+										<input type='radio' name='optionRadiosNumber' id='optionsRadiosShowNuber' value='ShowNumber'>
+										Display number
+									</label>
+								</div>
+
+							</div>
+						</div>
+					</div>						
+					<div class='row'>
+						<div class='form-group'>
+							<label class='col-md-2'>
+								<div class='pull-right'>
+									<small>State: *</small>
+								</div>
+							</label>
+							<div class='col-md-4 margin-bottom-15'>
+								<select class='form-control input-sm'>
+									<option>1</option>
+									<option>2</option>
+									<option>2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class='row'>
+						<div class='form-group'>
+							<label class='col-md-2'>
+								<div class='pull-right'>
+									<small>City: *</small>
+								</div>
+							</label>
+							<div class='col-md-4 margin-bottom-15'>
+								<select class='form-control input-sm btn btn-default'>
+									<option>1</option>
+									<option>2</option>
+									<option>2</option>
+								</select>
+							</div>
+						</div>
+					</div>					
+					<div class='row'>
+						<div class='form-group'>
+							<label class='col-md-2'>
+								<div class='pull-right'>
+									<small>Locality:</small>
+								</div>
+							</label>
+							<div class='col-md-7 margin-bottom-15'>
+								<input type='text' class='form-control input-sm' placeholder='Enter a Locality'>
+							</div>
+						</div>
+					</div>
+					<div class='row border-bottom-light-gray margin-bottom-15'></div>
+					<div class='row'>
+						<div class='form-group'>
+							<label class='col-md-2'>
+								<div class='pull-right'>
+									<small>Tags:</small>
+								</div>
+							</label>
+							<div class='col-md-7 margin-bottom-15'>
+								<input type='text' class='form-control input-sm' placeholder='at least 1 tag such as (eg: home mobile car), max 5 tags'>
+							</div>
+						</div>						
+					</div>
+					<div class='row'>
+						<div class='form-group'>
+							<label class='col-md-2'></label>
+							<div class='col-md-7'>
+								<label>
+									<input type='checkbox' value=''>
+									<small>Remember above contact information.</small>
+								</label>							
+							</div>
+						</div>
+					</div>					
+					<div class='row margin-bottom-20'>
+						<div class='from-group'>
+							<div class='col-md-offset-2 col-md-4'>
+								<button type='submit' class='btn btn-primary margin-top-15 padding-left-20 padding-right-20'>
+									Submit
+								</button>
+							</div>
+						</div>
+					</div>
+				</form>					
+			</div>
+		</form>			
+	</div>
+</div>

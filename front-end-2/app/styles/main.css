@@ -1,0 +1,363 @@
+/* Space out content a bit */
+body {
+  padding-top: 0px;
+  padding-bottom: 20px;
+  background: #eee;
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(238, 238, 238);
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 80%;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+
+/*--------------------------------------------------------------*/
+
+.nav-container-margin{
+  max-width: 80%;
+}
+.collapse button{
+  
+  width: 100%;
+  position: relative;
+  margin-top: 14px;
+  background-color: #60b044;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+  background-color: #60b044;
+  background-image: -moz-linear-gradient(#8add6d, #60b044);
+  background-image: -webkit-linear-gradient(#8add6d, #60b044);
+  background-image: linear-gradient(#8add6d, #60b044);
+  background-repeat: repeat-x;
+  border-color: #5ca941;
+  font-size: 23px !important;
+}
+
+.navbar {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.navbar h1{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 40px;
+}
+.font-size-10{
+  font-size: 10px;
+}
+.font-size-12{
+  font-size: 12px;
+  color: #C40300;
+}
+.font-size-15{
+  font-size: 15px;
+}
+.font-size-16{
+  font-size: 16px;
+}
+.font-size-24{
+  font-size: 24px;
+  margin-right: 10px;
+}
+.front-items-heading-color{
+  color: #00286B;
+}
+.font-color-black{
+  color: #000;
+}
+.font-color-blue{
+  color:#428bca;
+}
+.cat-counter{
+  color: #7F7F7F;
+}
+
+/*----------------Padding-Margin----------------------------------*/
+
+.padding-right-null{
+  padding-right: 0px;
+}
+.padding-left-null {
+  padding-left: 0px;
+}
+.padding-top-5{
+  padding-top: 5px;
+}
+.padding-top-40{
+  padding-top: 40px;
+}
+.padding-bottom-null{
+  padding-bottom: 0px;
+}
+.padding-bottom-10{
+  padding-bottom: 10px;
+}
+.padding-left-10{
+  padding-left: 10px;
+}
+.padding-left-20{
+  padding-left: 20px;
+}
+.padding-left-15{
+  padding-left: 15px;
+}
+.padding-right-15{
+  padding-right: 15px;
+}
+.padding-right-20{
+  padding-right: 20px;
+}
+.padding-bottom-5{
+  padding-bottom: 5px;
+}
+.padding-bottom-15{
+  padding-bottom: 15px;
+}
+.margin-top-2{
+  margin-top: 2px;
+}
+.margin-top-10{
+  margin-top: 10px;
+}
+.margin-top-15{
+  margin-top: 15px;
+}
+.margin-bottom-null{
+  margin-bottom: 0px;
+}
+.margin-right-null{
+  margin-right: 0px;
+}
+.margin-left-null{
+  margin-left: 0px;
+}
+.margin-right-15{
+  margin-right: 15px;
+}
+.margin-left-15{
+  margin-left: 15px;
+}
+.margin-bottom-10{
+  margin-bottom: 10px;
+}
+.margin-bottom-15{
+  margin-bottom: 15px;
+}
+.margin-bottom-20{
+  margin-bottom: 20px;
+}
+.margin-bottom-30{
+  margin-bottom: 30px;
+}
+
+
+
+/*-----------------------------------------------------*/
+
+.width-48{
+  width: 48%;
+}
+.width-49{
+  width: 49%;
+}
+
+/*-----------border-----------------------*/
+.border-left-right-top{
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  margin-bottom: 0px;
+}
+.border-1{
+  border:1px solid #DBD4A8;
+}
+.border-bottom-light-gray{
+  border-bottom:1px solid #ccc;
+}
+.border-top-light-gray{
+  border-top:1px solid #ccc;
+}
+
+.border-light-gray{
+  border:1px solid #ccc;
+}
+.caret-border{
+  border-right-width: 5px;
+  border-left-width: 5px;
+  border-top-width: 5px;
+  height: 8px;
+}
+.caret-border-big{
+  border-right-width: 6px;
+  border-left-width: 6px;
+  border-top-width: 6px;
+  height: 8px;
+}
+.phone-border-big{
+  border-right-width: 6px;
+  border-left-width: 6px;
+  border-top-width: 6px;
+  height: 8px;
+}
+/*---------------Pannel-----------------------------*/
+.panel-heading-color{
+  background-color: #428bca;
+}
+/*---------------------------------------*/
+.background-color-white{
+  background-color: white;
+}
+.background-color-gray{
+  background-color: rgb(238, 238, 238);
+}
+
+.style-none{
+  list-style: none;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.product-list{
+  text-align: center;
+}
+.product-list-glyphicon{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 35px;
+}
+.product-list-glyphicon-24{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.product-category-list-glyphicon{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #428bca;
+}
+.product-data{
+  display: block;
+  word-wrap: break-word;
+}
+.align-center{
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+.badge-color{
+  background-color: #5ca941;
+}
+
+.uploader-slot-first{
+  width: 200px;
+  height: 177px;
+  padding: 40px 0 0 0;
+}
+.uploader-slot-all{
+  height: 102px;
+  width: 102px;
+  padding: 15px 0 0 0;
+  margin: 0 10px 10px 0;
+}
+.disabled{
+  color: #C4E;
+}
+#file{
+    width: 60%;
+    height: 100%;
+    background: rgba(150,225,150,0.5);
+    vertical-align: middle;
+    text-align: center;
+    padding: 0 20%;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 200px;
+    opacity: 0;
+    display: none;
+}
+.overflow-hiden{
+  overflow: hidden;
+  position: relative;
+}

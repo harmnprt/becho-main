@@ -1,0 +1,226 @@
+  <!-- ((((((((((((((((((((Panel-Heading))))))))))))))))))))))))))-->
+  <div class='row' ng-controller='MidleCtrl'>
+    <div class='container'>
+      <div class='col-md-8' style='border:2px solid green;'>
+        <div class='row margin-right-null margin-bottom-20'>
+          <div class='panel-group' id='accordion2'>
+            <!-- First Search pannel -->
+            <div class='panel'> 
+              <div class='panel-heading'>
+                <div class='row border-bottom-light-gray padding-bottom-10'>
+                  <div class='col-md-7 col-xs-11 col-sm-7 pull-left padding-left-15'>
+                    <span class='panel-title font-color-black font-size-24'>
+                      Find ads in <strong>India</strong>  
+                      <small>
+                        <span class='btn-link font-size-15' aria-hidden='true' data-toggle='collapse' data-parent='#topParent' data-target='#collapse2'>
+                          Chose your location
+                          <span class='caret caret-border'></span>
+                        </span>
+                      </small>
+                    </span>
+                  </div>
+                  <div class='col-md-5 col-xs-11 col-sm-5 pull-right padding-left-null'>
+                    <div class='row'>
+                      <form class='form-inline' role='form'>
+                        <div class='col-md-8 col-xs-6 col-sm-7 pull-left'>
+                          <div class='form-group'>
+                            <label class='sr-only' for='input-search-add'>Search adds</label>
+                            <input type='text' class='form-control' id='input-search-add' placeholder='Search Adds'>
+                          </div>
+                        </div>
+                        <div class='col-md-4 col-xs-6 col-sm-5 pull-left padding-left-null'>
+                          <button class='btn btn-primary pull-left'>Search</button>
+                        </div>               
+                      </form> 
+                    </div>
+                  </div>
+                </div>        
+              </div>
+              <!-- (((((((((((((((((((Panel-body))))))))))))))))))) -->
+
+              <set-location></set-location>
+              <div class='panel-body'>
+                <div class='row'>
+                    <div class='col-md-4'> 
+                    <div class='media'>
+                          <a href="#" class='btn btn-lg pull-left'>
+                            <span class='glyphicon glyphicon-phone'></span>
+                          </a>
+                          <div class='media-body'>
+                            <a href="#/products"><strong class='front-items-heading-color font-size-16'>Mobiles & tablets</strong></h4></a>
+                            <span class='cat-counter disabled'>11111 ads</span>
+                            <ul class='list-group'>
+                              <li><a href="">Mobile Phones</a></li>
+                              <li><a href="">Tablets</a></li>
+                              <li><a href="">Mobile Accessories</a></li>
+                            </ul>
+                          </div>
+                        </div>             
+                    </div>
+                    <!-- ************************************************* -->
+                    <div class='col-md-4'> 
+                      <div class='row'>
+                        <ul class='style-none'>
+                          <li ng-repeat='category in categories' style='' class='padding-top-5 margin-right-15 margin-bottom-15 btn-link padding-bottom-5'>
+                            <div class='product-list btn-default'>
+                              
+                                 <a href=''>
+                                  <span class='product-list-glyphicon {{category.imageUrl}}'></span>
+                                  <span class='product-data front-items-heading-color small'>
+                                    <strong>{{category.name}}</strong>
+                                    <ul class='style-none small'>
+                                      <li ng-repeat='item in category.subCategory'>
+                                        <a href="">{{item}}</a>
+                                      </li>
+                                    </ul>
+                                  </span>
+                                 </a> 
+                                
+                            </div>
+                          </li>
+                        </ul>
+                      </div>               
+                    </div>
+                    <!-- **************************************************** -->
+                    <div class='col-md-4'>
+                      <div class='row'>
+                        <ul class='style-none'>
+                          <li ng-repeat='category in categories'  class='padding-top-5 margin-right-15 margin-bottom-15 '>
+                            <div class='media btn-default'>
+                              <div class='col-md-4'>
+                                <a href="" class='product-list-glyphicon'>
+                                  <span class='{{category.imageUrl}}'></span>
+                                </a>
+                              </div>
+                              <div class='col-md-8 padding-left-null'>
+                                <div class='media-body'>
+                                  <a href="#/products">
+                                    <strong class='front-items-heading-color font-size-16'>
+                                      {{category.name}}
+                                    </strong>
+                                  </a>
+                                  <ul class='list-group'>
+                                    <li ng-repeat='list in category.subCategory'>
+                                      <a href="">{{list}}</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                              
+                            </div>          
+                          </li>
+                        </ul>
+                        
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='row margin-right-null'>
+          <div class='panel'>
+            <div class='panel-heading padding-bottom-null border-bottom-light-gray'>
+              <div class='row'>
+                <div class='col-md-12'>
+                  <p class='font-color-black font-size-15 '>
+                    Popular in project
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+
+            <div class='panel-heading padding-left-null padding-right-null padding-bottom-null '>
+              <div class='row padding-left-null padding-right-null margin-left-15 margin-right-15'>
+                <div class='col-md-5 width-48 padding-left-null border-bottom-light-gray' >
+                  <p class='font-color-black font-size-15'>
+                    <strong>Top cities:</strong>
+                  </p>
+                </div>
+                <div class='col-md-5 width-49 margin-left-15 padding-left-null' style='border-bottom:2px solid green;'>
+                  <p class='font-color-black font-size-15'>
+                    <strong>States:</strong>
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+            <div class='panel-body'>
+               <div class='col-md-5 width-48 padding-left-null' >
+                <div class='col-md-6 small'>
+                  <ul class='list-group' style='list-style:none;'>
+                    <li><a href="">Delhi</a></li>
+                    <li><a href="">Moga</a> </li>
+                  </ul>
+                </div>
+                <div class='col-md-6 small'>
+                  <ul class='list-group' style='list-style:none;'>
+                    <li><a href="">new delhi</a></li>
+                    <li><a href="">Moga</a> </li>
+                  </ul>
+                </div>
+               </div>
+                <div class='col-md-5 width-49 margin-left-15 padding-left-null'>
+                  <div class='col-md-4 small'>
+                    <ul class='list-group ' style='list-style:none;'>
+                      <li><a href="">Delhi</a></li>
+                      <li><a href="">Moga</a> </li>
+                      <li><a href="">Delhi</a></li>
+                      <li><a href="">punjab</a> </li>
+                      <li><a href="">rajastan</a></li>
+                      <li><a href="">bomby</a></li>
+                      <li><a href="">kerala</a></li>
+                      <li><a href="">bangluru</a></li>
+                      <li><a href="">rajastan</a></li>
+                      <li><a href="">bomby</a></li>
+                      <li><a href="">kerala</a></li>
+                      <li><a href="">bangluru</a></li>
+                    </ul>
+                  </div>
+                   <div class='col-md-4 small'>
+                    <ul class='list-group ' style='list-style:none;'>
+                      <li><a href="">Delhi</a></li>
+                      <li><a href="">Moga</a> </li>
+                      <li><a href="">Delhi</a></li>
+                      <li><a href="">punjab</a> </li>
+                      <li><a href="">rajastan</a></li>
+                      <li><a href="">bomby</a></li>
+                      <li><a href="">kerala</a></li>
+                      <li><a href="">bangluru</a></li>
+                      <li><a href="">rajastan</a></li>
+                      <li><a href="">bomby</a></li>
+                      <li><a href="">kerala</a></li>
+                      <li><a href="">bangluru</a></li>
+                    </ul>
+                  </div>
+                   <div class='col-md-4 small'>
+                    <ul class='list-group ' style='list-style:none;'>
+                      <li><a href="">Delhi</a></li>
+                      <li><a href="">punjab</a> </li>
+                      <li><a href="">rajastan</a></li>
+                      <li><a href="">bomby</a></li>
+                      <li><a href="">kerala</a></li>
+                      <li><a href="">bangluru</a></li>
+                      <li><a href="">rajastan</a></li>
+                      <li><a href="">bomby</a></li>
+                      <li><a href="">kerala</a></li>
+                      <li><a href="">bangluru</a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <div class='col-md-4 padding-right-null' style='border:2px solid green;'>
+        <div class='panel panel-default'>
+          <div class='panel-heading'>
+            <div class='panel-title'>title for adds</div>
+            </div>
+          <div class='panel-body'>body of panel</div>
+        </div>
+      </div>
+    </div>  
+  </div>
