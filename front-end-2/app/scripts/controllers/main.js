@@ -127,4 +127,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
           console.info('Complete all', items);
         });
 
+    }])
+    .controller('ProductsDetailCtrl', ['$scope', function ($scope){
+      $scope.newvalue = 'newproduct';
     }]);

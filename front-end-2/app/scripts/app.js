@@ -27,6 +27,10 @@ var frontEnd2App = angular
         templateUrl: '/views/post_your_add.html',
         controller: 'postYourAdds'
       })
+      .when('/products/productsId', {
+        templateUrl: '/views/products-detail.html',
+        controller: 'ProductsDetailCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -129,7 +129,6 @@ body {
 }
 .font-size-12{
   font-size: 12px;
-  color: #C40300;
 }
 .font-size-15{
   font-size: 15px;
@@ -149,6 +148,9 @@ body {
 }
 .font-color-blue{
   color:#428bca;
+}
+.font-color-mazenta{
+  color: #C40300;
 }
 .cat-counter{
   color: #7F7F7F;
@@ -376,4 +378,34 @@ body {
 .overflow-hiden{
   overflow: hidden;
   position: relative;
+}
+
+/*-------------------------product-detail.html--------------------------------*/
+.mini-image-panel{
+  height: 60px;
+  width: 70px;
+  padding: 0 0 0 0;
+  margin: 0 0 0px 0px;
+  background-color: white;
+  border: 1px solid black;
+  padding-top: 0px;
+}
+.large-image-panel{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  height: 240px;
+  padding: 0 0 0 0;
+  background-color:white;
+  border: 1px solid black;
+}
+.price-tag{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: yellow;
+}
+.font-color-gray{
+  color: #999;
+  font-weight: bold;
 }
