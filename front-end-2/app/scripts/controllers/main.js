@@ -19,7 +19,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
     .controller('postYourAdds', ['$scope', 'Category','$fileUploader', '$http', 
       function ($scope, Category, $fileUploader, $http){
         $scope.categories = Category.query();
-
+        $scope.queue= [1,2,3,4,5,6]
         var data = {txt: 'new text'}
         $http.post('/this', data)
         .success(function(data){

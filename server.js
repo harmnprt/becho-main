@@ -12,6 +12,7 @@ var express = require('express'),
 	app.use('/styles', express.static(__dirname + '/front-end-2/app/styles'));
 	app.use('/views', express.static(__dirname + '/front-end-2/app/views' ));
 	app.use('/product-category', express.static(__dirname + '/front-end-2/app/product-category'))
+	app.use('/img', express.static(__dirname+ '/front-end-2/app/img'));
 	// app.use(bodyParser());
 	// app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 //});

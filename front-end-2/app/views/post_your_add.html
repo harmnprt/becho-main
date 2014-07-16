@@ -16,11 +16,10 @@
 						<div class='col-md-10 border-1' style='background-color:#FFFED4;'>
 							<h4 class='font-size-16' style='color:#ff6700;'>Ads with photos sell up to 5X more!</h4>
 							<div class='col-md-10' ng-file-drop>
-								<div class='row well my-drop-zone product-list' >
-									
+								<div class='row well back-img my-drop-zone product-list' >
 									<div ng-show='true'>
 										<div ng-file-over>
-											<div class='overflow-hiden col-md-4 margin-right-15 uploader-slot-first margin-bottom-15 disabled' style='background-color:white;'>
+											<div class='col-md-4  uploader-slot-first disabled' >
 												<span class='glyphicon glyphicon-camera product-list-glyphicon' ></span>
 												<div class='product-data'>
 													<strong class='font-size-16'>
@@ -36,22 +35,26 @@
 													</strong>
 												</div>
 											</div> -->
-											<div ng-repeat='item in uploader.queue'>
-												<div class='col-md-2 margin-right-15 margin-bottom-15 padding-left-null padding-right-null disabled' style='border:1px solid gray; background-color:white; height:82px;'>
-
-													<div ng-show='!uploader.isHTML5'>
-														<span class='glyphicon glyphicon-camera product-list-glyphicon-24' ></span>
-														<div class='product-data'>
-															<strong class=''>
-																+Add Photos
-															</strong>
+											<div class=''>
+												<div ng-repeat='item in uploader.queue' class='padding-left-15'>
+													<div class='col-md-2 disabled uploader-slot-all'>
+														<div ng-show='uploader.isHTML5' ng-thumb='{file: item.file, height:100}' class=''>
 														</div>
 													</div>
-													<div ng-show='uploader.isHTML5' ng-thumb='{file: item.file, height:100		}'>
+												</div>
+												<div ng-show='uploader.queue==0' ng-repeat='item in queue' class='opacity'>
+													<div class='col-md-2 disabled uploader-slot-all'>
+														<div ng-show='uploader.isHTML5'>
+															<span class='glyphicon glyphicon-camera product-list-glyphicon-24' ></span>
+															<div class='product-data'>
+																<strong class=''>
+																	+Add Photos
+																</strong>
+															</div>
+														</div>
 													</div>
 												</div>
-											</div>
-												
+											</div>									
 										</div>
 									</div>
 									<input ng-file-select type='file' id='file' multiple class='overflow-hiden'>

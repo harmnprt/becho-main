@@ -329,17 +329,33 @@ body {
 .badge-color{
   background-color: #5ca941;
 }
-
+.back-img{
+  background-image: url('/img/sell1.png');
+  background-repeat: no-repeat;
+  padding-left: 17px;
+}
+.add-more-photos{
+  font-size: 25px;
+  color: #C4E;
+  padding-top: 70px; 
+}
 .uploader-slot-first{
-  width: 200px;
-  height: 177px;
+  height: 180px;
   padding: 40px 0 0 0;
+  background-color:white;
+  border: 1px solid black;
 }
 .uploader-slot-all{
-  height: 102px;
-  width: 102px;
+  height: 83px;
+  width: 106px;
   padding: 15px 0 0 0;
-  margin: 0 10px 10px 0;
+  margin: 0 0 10px 10px;
+  background-color: white;
+  border: 1px solid black;
+  padding-top: 0px;
+}
+.opacity{
+  opacity: 0;
 }
 .disabled{
   color: #C4E;
