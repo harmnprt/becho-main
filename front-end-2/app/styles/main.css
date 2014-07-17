@@ -409,3 +409,7 @@ body {
   color: #999;
   font-weight: bold;
 }
+.name-size-input{
+  width: 80px;
+  height: 20px;
+}
