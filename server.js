@@ -34,6 +34,12 @@ app.get('/product-category/category.json', function(req, res){
 app.get('/adds-list-item/adds-list.json', function(req, res){
 	res.sendfile(__dirname + '/front-end-2/app/adds-list-item/adds-list.json')
 });
+app.get('/adds-list-item/productsId', function(req, res){
+	res.sendfile(__dirname + '/front-end-2/app/adds-list-item/add-detail.json');
+});
+app.get('/setLocation/city_list.json', function  (req, res) {
+	res.sendfile(__dirname + '/front-end-2/app/dataBase/location/city_list.json');
+});
 
 app.listen(8080, function(){
 	console.log('server started on port 8080');

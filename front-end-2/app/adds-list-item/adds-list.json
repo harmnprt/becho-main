@@ -7,7 +7,8 @@
 		"discription":"this is detail of product",
 		"price": 12000,
 		"date": "today",
-		"time": "12pm"
+		"time": "12pm",
+		"url": "products/productsId"
 	},
 	{
 		"number":0,

@@ -82,7 +82,8 @@
                             <div id='myTabContent' class='tab-content background-color-gray'>
                                 <div class='tab-pane fade in active' id='long-view'>
                                     <div class='list-group'>
-                                        <a href="" class='list-group-item padding-left-null padding-right-null margin-bottom-10' ng-repeat='add in adds_list'>                            
+                                        <div  class='list-group-item padding-left-null padding-right-null margin-bottom-10' ng-repeat='add in adds_list'>    
+                                            <a href="/#/{{add.url}}">                  
                                                 <div class='media'>
                                                     <div class='col-md-2'>
                                                         <div href="" class='btn-link pull-left'>
@@ -101,8 +102,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            
-                                        </a>
+                                            </a>
+                                        </div>
                                         
                                         <a href="" class='list-group-item'><h1>new heading</h1></a>
                                     </div>                                    

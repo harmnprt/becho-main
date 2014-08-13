@@ -69,7 +69,7 @@
                   <span class='navbar-brand'>
                     <h1>Project 
                       <small class='btn-link' data-toggle='collapse' data-parent='#topParent' data-target='#collapse1'>
-                          free selling site
+                          {{selected_location}}
                           <span class='caret caret-border-big'></span>
                       </small>
                     </h1>
@@ -96,7 +96,7 @@
             <div id='collapse1' class='container   panel-collapse collapse '>
               <div class='border-light-gray' >
                 <div class='panel-body background-color-white'>
-                  <div class='row padding-left-15'>
+                  <!-- <div class='row padding-left-15'>
                     <form class='form-horizontal' role='form'>
                               <div class='form-group form-group-sm'>  
                                 <label class='sr-only col-sm-3' for='input-search-add'>Search location</label>
@@ -114,10 +114,11 @@
                         <li><a href="">Moga City</a></li>
                       </ul>
                     </div>
-                  </div>
-                  
+                  </div> -->
+                  <set-location></set-location>    
                 </div>
               </div>
+
             </div>
         </div>
       </div>

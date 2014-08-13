@@ -9,6 +9,12 @@ app.factory('Category', ['$resource', function ($resource) {
   	});
   }]);
 
+app.factory('setLocation', ['$resource', function ($resource) {
+	return $resource('/setLocation/:CityState.json/:cities', {}, {
+		query: {method: 'GET', params:{CityState: 'city_list'}, isArray: true}
+	});
+}]);
+
 app.factory('sellingItem', ['$resource', function ($resource) {
 	return $resource('/adds-list-item/:addId', {}, {
 		query: {method: 'GET', params:{addId: 'adds-list.json'}, isArray: true}

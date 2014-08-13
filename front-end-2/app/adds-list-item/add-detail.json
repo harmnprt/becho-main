@@ -1,0 +1,20 @@
+	{
+		"heading": "this",
+		"sellerName": "harman",
+		"sellerNumber": 8054100233,
+		"locality": "moga",
+		"state": "punjab",
+		"condition": "second hand",
+		"brand": "nokia",
+		"addDiscription": "asfda adsfasd asdfa fas fasf asfasfasf asdf as",
+		"furtherDetail": {
+							"brand": "nokia",
+							"model": "lumia-1020"
+						},
+		"images": [
+			"img/phones/img1.png",
+			"img/phones/img2.png",
+			"img/phones/img3.png"
+		],
+		"price": 12000
+	}

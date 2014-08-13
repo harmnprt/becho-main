@@ -34,7 +34,7 @@
 					<div class=''>
 						<div class='panel panel-default margin-bottom-20'>
 							<div class='panel-heading'>
-								<h4>Head: This is my First Heading of Product</h4>
+								<h4>{{phoneDetail.heading}}</h4>
 							</div>
 							<div class='panel-body'>
 								<div class='row margin-left-null margin-right-null margin-bottom-20'>
@@ -52,18 +52,18 @@
 										</div>
 									</div>
 									<div class='col-md-3' style='border:1px solid yellow;'>
-										<span class='price-tag'>Price: 12000 rs.</span>
+										<span class='price-tag'>Price: {{phoneDetail.price}} rs.</span>
 										<div class='border-top-light-gray'>
 											<h6>Locality:</h6>
-											<h6><b>Moga</b></h6>
+											<h6><b>{{phoneDetail.locality}}</b></h6>
 										</div>
 										<div class='border-top-light-gray'>
 											<h6>Condition:</h6>
-											<h6><b>Second Hand</b></h6>
+											<h6><b>{{phoneDetail.condition}}</b></h6>
 										</div>
 										<div class='border-top-light-gray'>
 											<h5>Brand:</h5>
-											<h5><b>Nokia.</b></h5>
+											<h5><b>{{phoneDetail.brand}}</b></h5>
 										</div>
 									</div>
 								</div>
@@ -73,7 +73,7 @@
 									</div>
 									<div class='font-size-12'>
 										<p class='font-color-gray'>
-											thiasfdas dafs asfasdf asdfasfasf assfasf asdfsfasdf adsfasfas sdf asfas af asfas fsdf sfas fa sfas fasf sfas asf asf safa fa 
+											{{phoneDetail.addDiscription}}
 										</p>
 										<div class='col-md-4' style='border:1px solid green'>
 											<!-- <div class='col-md-6'>
@@ -90,11 +90,11 @@
 												<tbody>
 													<tr>
 														<td><b>Brand:</b></td>
-														<td>Nokia</td>
+														<td>{{phoneDetail.furtherDetail.brand}}</td>
 													</tr>
 													<tr>
 														<td><b>Model:</b></td>
-														<td>Lumia 1025</td>
+														<td>{{phoneDetail.furtherDetail.model}}</td>
 													</tr>
 												</tbody>							
 											</table>
@@ -208,8 +208,8 @@
 			<div class='col-md-3' style='border:2px solid pink;'>
 				<div class='add-details-name'>
 					<button type='button' class='btn btn-danger col-md-12 margin-bottom-15 pull-left' >
-						<h4 class='pull-left'>Harmanpreet Singh</h4>
-						<h4 class='pull-left'>+91-8054100233</h4>
+						<h4 class='pull-left'>{{phoneDetail.sellerName}}</h4>
+						<h4 class='pull-left'>+91-{{phoneDetail.sellerNumber}}</h4>
 						<h4><span class='glyphicon glyphicon-user pull-right'></span></h4>
 					</button>
 					<button type='button' class='btn btn-danger col-md-12'>

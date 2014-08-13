@@ -3,15 +3,25 @@ console.log('main.js');
 
 var app = angular.module('appControllers', []);
 
-app.controller('MainCtrl', ['$scope', function ($scope) {
+app.controller('MainCtrl', ['$scope', '$rootScope', 'setLocation', 
+  function ($scope, $rootScope, setLocation) {
     $scope.name = 'harman';
     console.log('main.js > MainCtrl');
+    $rootScope.locations_list = setLocation.query();
+    console.log(setLocation.query());
+    $rootScope.selected_location = 'Chose your Location';
+    $scope.setLocation_func = function (selected_location) {
+          $rootScope.selected_location = selected_location.state;
+          console.log(selected_location.state);
+        }
+
   }])
-    .controller('MidleCtrl', ['$scope','Category', function($scope, Category){
-      $scope.categories = Category.query();
-      console.log('categories list');
-      console.log(Category.query());
-      $scope.name='new World';
+    .controller('MidleCtrl', ['$scope','Category', 'setLocation', 
+      function($scope, Category, setLocation){
+        $scope.categories = Category.query();
+        console.log('categories list');
+        console.log(Category.query());
+        $scope.name='new World';
   }])
     .controller('ProductsCtrl', ['$scope', 'sellingItem', function($scope, sellingItem){
       $scope.adds_list = sellingItem.query();
@@ -128,6 +138,10 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
         });
 
     }])
-    .controller('ProductsDetailCtrl', ['$scope', function ($scope){
+    .controller('ProductsDetailCtrl', ['$scope', '$routeParams', 'sellingItem',
+      function ($scope, $routeParams, sellingItem){
+      $scope.productsId = $routeParams.productsId;
+      console.log('console output ' + $scope.productsId)
       $scope.newvalue = 'newproduct';
+      $scope.phoneDetail = sellingItem.get({addId: $routeParams.productsId});
     }]);

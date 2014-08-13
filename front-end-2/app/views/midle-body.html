@@ -13,7 +13,9 @@
                       Find ads in <strong>India</strong>  
                       <small>
                         <span class='btn-link font-size-15' aria-hidden='true' data-toggle='collapse' data-parent='#topParent' data-target='#collapse2'>
-                          Chose your location
+                          {{selected_location}}
+                          <!-- <span ng-show='null'>Chose your location</span> -->
+                          
                           <span class='caret caret-border'></span>
                         </span>
                       </small>
@@ -37,8 +39,9 @@
                 </div>        
               </div>
               <!-- (((((((((((((((((((Panel-body))))))))))))))))))) -->
-
-              <set-location></set-location>
+              <div id='collapse2' class='panel-collapse collapse border-bottom-light-gray margin-bottom-10'>
+                <set-location></set-location>
+              </div>
               <div class='panel-body'>
                 <div class='row'>
                     <div class='col-md-4'> 

@@ -23,14 +23,14 @@ var frontEnd2App = angular
         templateUrl: '/views/products.html',
         controller: 'ProductsCtrl'
       })
-      .when('/postYourAdds', {
-        templateUrl: '/views/post_your_add.html',
-        controller: 'postYourAdds'
-      })
-      .when('/products/productsId', {
+      .when('/products/:productsId', {
         templateUrl: '/views/products-detail.html',
         controller: 'ProductsDetailCtrl'
       })
+      .when('/postYourAdds', {
+        templateUrl: '/views/post_your_add.html',
+        controller: 'postYourAdds'
+      })      
       .otherwise({
         redirectTo: '/'
       });

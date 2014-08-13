@@ -1,0 +1,16 @@
+[
+	{
+		"state": "Punjab",
+		"cities": [
+			"Moga",
+			"Barnala",
+			"Ludhiana",
+			"Faridhkot",
+			"Jalandhar",
+			"Bathinda"
+		]
+	},
+	{
+		"state": "Delhi"
+	}
+]
