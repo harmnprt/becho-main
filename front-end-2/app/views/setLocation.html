@@ -4,7 +4,7 @@
                     <form class='form-horizontal' role='form'>
                               <div class='form-group form-group-sm'>  
                                 <div class='col-sm-9'>
-                                  <input type='text' class='form-control ' id='input-search-add' placeholder='Search Location'>
+                                  <input type='text' class='form-control ' id='input-search-add' ng-model='location_filter' placeholder='Search Location'>
                                 </div>
                                 <label class='sr-only ' for='input-search-add'>Search location</label>
                               </div>                                  
@@ -24,14 +24,43 @@
                           </p>
                         </div>
                       </div>
-                      <div class='row padding-left-null padding-right-null margin-left-15 margin-right-15'>
+                      <div class='row padding-left-null padding-right-null margin-left-15 margin-right-15 font-color-blue'>
                         <div class='col-md-5 width-48 padding-left-null'>
-                          <div class='col-md-4 small'>
+                          <div class='col-md-4 small padding-left-null' ng-hide='location_filter'>
                             <ul class='list-group margin-top-10'  style="list-style:none;">
-                              <li ng-repeat='states in locations_list' class='margin-bottom-5 font-color-blue' ng-click='setLocation_func(states)'>{{states.state}}</li>
+                              <li ng-repeat='states in locations_list' class='margin-bottom-5' ng-click='find_state_func(states)'>
+                                <ul class='list-group' style="list-style:none;">
+                                  <li ng-repeat='popularCities in states.popular_cities | limitTo: 10' ng-if='$index < 10' ng-click='setLocation_city_func(popularCities)' >
+                                    {{popularCities}}
+                                  </li>
+                                </ul>                                  
+                              </li>
                             </ul>                            
                           </div>
+                          <div class='col-md-4 padding-left-null small' ng-show='location_filter'>
+                            <ul class='list-group margin-top-10' style='list-style:none'>
+                              <li ng-repeat='states in locations_list' ng-click='find_state_func(states)'>
+                                <ul class='list-group' style="list-style:none">
+                                  <li ng-repeat='city in states.cities | filter:location_filter' ng-click='setLocation_city_func(city)'>
+                                    {{city}}
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
+                        <div class='col-md-5 width-49 margin-left-15 padding-left-null'>
+                          <div class='col-md-4 padding-left-null small'>
+                            <ul class='list-group margin-top-10' style='list-style:none'>
+                              <li ng-repeat='states in locations_list' class='margin-bottom-5' ng-click='setLocation_state_func(states)'>
+                                {{states.state}}
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class='row padding-left-null padding-right-null margin-left-15 margin-right-15' >
+                      
                       </div>
                       <div class='col-md-2'></div>
                       <div class='col-md-2'></div>

@@ -10,10 +10,18 @@ app.controller('MainCtrl', ['$scope', '$rootScope', 'setLocation',
     $rootScope.locations_list = setLocation.query();
     console.log(setLocation.query());
     $rootScope.selected_location = 'Chose your Location';
-    $scope.setLocation_func = function (selected_location) {
+    $scope.setLocation_state_func = function (selected_location) {
           $rootScope.selected_location = selected_location.state;
-          console.log(selected_location.state);
+          console.log(selected_location);
         }
+    $scope.setLocation_city_func = function (selected_location) {
+          $rootScope.selected_location = selected_location;
+          console.log(selected_location);
+        }
+    $scope.find_state_func = function(states){
+          $rootScope.selected_state = states.state;
+          console.log(states.state);
+    }
 
   }])
     .controller('MidleCtrl', ['$scope','Category', 'setLocation', 
