@@ -1,21 +1,353 @@
 [
+	
 	{
-		"state": "Punjab",
+		"count":1,
+		"state": "Andhra Pradesh",
 		"cities": [
-			"Moga",
-			"Barnala",
-			"Ludhiana",
-			"Faridhkot",
-			"Jalandhar",
-			"Bathinda"
+			"Adoni",
+			"Amalapuram",
+			"Anakapalle",
+			"Anantapur",
+			"Bapatla",
+			"Bhimavaram",
+			"Bobbili",
+			"Chilakalurupet",
+			"Chinnachowk",
+			"Chirala",
+			"Chittoor",
+			"Cuddapah",
+			"Dharmavaram",
+			"Eluru",
+			"Gudivada",
+			"Gudur",
+			"Guntakal",
+			"Guntur",
+			"Hindupur",
+			"Kadiri",
+			"Kakinada",
+			"Kapra",
+			"Kavali",
+			"Kurnool",
+			"Machilipatnam",
+			"Madanapalle",
+			"Mangalagiri",
+			"Markapur",
+			"Nandyal",
+			"Narasaraopet",
+			"Narsapur",
+			"Nellore",
+			"Nuzvid",
+			"Ongole",
+			"Palakol",
+			"Pitapuram",
+			"Ponnur",
+			"Proddatur",
+			"Qutubullapur",
+			"Rajahmundry",
+			"Ramachandrapuramg",
+			"Rayachoti",
+			"Rayadur",
+			"Samalkota",
+			"Sattenapalle",
+			"Srikakulam",
+			"Srikalahasti",
+			"Tadepalligudem",
+			"Tadpatri",
+			"Tanuku",
+			"TirupatiTenali",
+			"TuniVizag",
+			"Vijayawada",
+			"Vinukonda",
+			"Vizianagaram",
+			"Yemmiganur"
 		],
 		"popular_cities": [
-			"Ludhiana",
-			"Jalandhar",
-			"Moga"
+			"Hyderabad"
+		]
+	},
+
+	{
+		"count":2,
+		"state": "Arunachal Pradesh",
+		"cities":["Itanagar"],
+		"popular_cities": [
+			"Itanagar"
 		]
 	},
 	{
-		"state": "Delhi"
+		"count":3,
+		"state": "Assam",
+		"cities":[
+			"Bongaigaon",
+			"Dhubri",
+			"Dibrugarh",
+			"Diphu",
+			"Dispur",
+			"Guwahati",
+			"Jorhat",
+			"Karimganj",
+			"Lumding",
+			"Nagaon",
+			"North",
+			"Lakhimpur",
+			"Silchar",
+			"Sivasagar",
+			"Tezpur",
+			"Tinsukia"
+		],
+		"popular_cities": [
+			"Dispur"
+		]
+	},
+	{
+		"count":4,
+		"state": "Bihar",
+		"cities": [
+			"Araria",
+			"Arrah",
+			"Aurangabad ",
+			"Bagaha",
+			"Begusarai",
+			"Bettiah",
+			"Bhagalpur",
+			"Bihar",
+			"Buxar",
+			"Chapra",
+			"Darbhanga",
+			"Dehrion",
+			"Dinapur Nizamat",
+			"Gaya",
+			"Gopalganj",
+			"Hajipur",
+			"Jamalpur",
+			"Jamui",
+			"Jehanabad",
+			"Katihar",
+			"Kishanganj",
+			"Lakhisarai",
+			"Madhubani",
+			"Mokama",
+			"Motihari",
+			"Munger",
+			"Muzaffarpur",
+			"Nawada",
+			"Patna",
+			"Phulwari",
+			"Sharif",
+			"Purnia",
+			"Saharsa",
+			"Samastipur",
+			"Sasaram",
+			"Sitamarhi",
+			"Supaul"
+		],
+		"popular_cities": [
+			"Patna"
+		]
+	},
+	{
+		"count":5,
+		"state": "Chhattisgarh",
+		"popular_cities": [
+			"Raipur"
+		]
+	},
+	{
+		"count":6,
+		"state": "Goa",
+		"popular_cities": [
+			"Panaji"
+		]
+	},
+	{
+		"count":7,
+		"state": "Gujarat",
+		"popular_cities": [
+			"Gandhinagar"
+		]
+	},
+	{
+		"count":8,
+		"state": "Haryana",
+		"popular_cities": [
+			""
+		]
+	},
+	{
+		"count":9,
+		"state": "Himachal Pradesh",
+		"popular_cities": [
+			"Shimla"
+		]
+	},
+	{
+		"count":10,
+		"state": "Jammu and Kashmir",
+		"popular_cities": [
+			"Srinagar"
+		]
+	},
+	{
+		"state": "Jharkhand",
+		"popular_cities": [
+			"Ranchi"
+		]
+	},
+	{
+		"state": "Karnataka",
+		"popular_cities": [
+			"Bengaluru"
+		]
+	},
+	{
+		"state": "Kerala",
+		"popular_cities": [
+			"Thiruvananthapuram"
+		]
+	},
+	{
+		"state": "Madhya Pradesh",
+		"popular_cities": [
+			"Madhya Pradesh"
+		]
+	},
+	{
+		"state": "Maharashtra",
+		"popular_cities": [
+			"Mumbai"
+		]
+	},
+	{
+		"state": "Manipur",
+		"popular_cities": [
+			"Imphal"
+		]
+	},
+	{
+		"state": "Meghalaya",
+		"popular_cities": [
+			"Shillong"
+		]
+	},
+	{
+		"state": "Mizoram",
+		"popular_cities": [
+			"Aizawl"
+		]
+	},
+	{
+		"state": "Nagaland",
+		"popular_cities": [
+			"Kohima"
+		]
+	},
+	{
+		"state": "Orissa",
+		"popular_cities": [
+			"Bhubaneswar"
+		]
+	},
+	{
+		"state": "Punjab",
+		"popular_cities": [
+			"Ludhiana",
+			"Jalandhar"
+		]
+	},
+	{
+		"state": "Rajasthan",
+		"popular_cities": [
+			"Jaipur"
+		]
+	},
+	{
+		"state": "Sikkim",
+		"popular_cities": [
+			"Gangtok"
+		]
+	},
+	{
+		"state": "Tamil Nadu",
+		"popular_cities": [
+			"Chennai"
+		]
+	},
+	{
+		"state": "Telangana",
+		"popular_cities": [
+			""
+		]
+	},
+	{
+		"state": "Tripura",
+		"popular_cities": [
+			"Agartala"
+		]
+	},
+	{
+		"state": "Uttar Pradesh",
+		"popular_cities": [
+			"Lucknow"
+		]
+	},
+	{
+		"state": "Uttarakhand",
+		"popular_cities": [
+			"Dehradun"
+		]
+	},
+	{
+		"state": "West Bengal",
+		"popular_cities": [
+			"Kolkata"
+		]
+	},
+	{
+		"state": "Andaman & Nicobar",
+		"popular_cities": [
+			"Port Blair"
+		]
+	},
+	{
+		"state": "",
+		"popular_cities": [
+			"Chandigarh"
+		]
+	},
+	{
+		"state": "Dadar & Nagar Haveli",
+		"popular_cities": [
+			""
+		]
+	},
+	{
+		"state": "Daman & Diu",
+		"popular_cities": [
+			"Daman"
+		]
+	},
+	{
+		"state": "Daman",
+		"popular_cities": [
+			""
+		]
+	},
+	{
+		"state": "",
+		"popular_cities": [
+			"Delhi"
+		]
+	},
+	{
+		"state": "Lakshadweep",
+		"popular_cities": [
+			""
+		]
+	},
+	{
+		"state":"",
+		"popular_cities": [
+			"Pondicherry"
+		]
 	}
 ]

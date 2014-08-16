@@ -21,7 +21,8 @@ app.controller('MainCtrl', ['$scope', '$rootScope', 'setLocation',
     $scope.find_state_func = function(states){
           $rootScope.selected_state = states.state;
           console.log(states.state);
-    }
+    };
+    $rootScope.orderPro = 'popular_cities';
 
   }])
     .controller('MidleCtrl', ['$scope','Category', 'setLocation', 

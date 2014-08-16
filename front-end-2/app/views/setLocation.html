@@ -26,17 +26,41 @@
                       </div>
                       <div class='row padding-left-null padding-right-null margin-left-15 margin-right-15 font-color-blue'>
                         <div class='col-md-5 width-48 padding-left-null'>
+                          <!-- Popular Cities -->
                           <div class='col-md-4 small padding-left-null' ng-hide='location_filter'>
-                            <ul class='list-group margin-top-10'  style="list-style:none;">
-                              <li ng-repeat='states in locations_list' class='margin-bottom-5' ng-click='find_state_func(states)'>
-                                <ul class='list-group' style="list-style:none;">
-                                  <li ng-repeat='popularCities in states.popular_cities | limitTo: 10' ng-if='$index < 10' ng-click='setLocation_city_func(popularCities)' >
+                            <ul class='list-group margin-top-10 margin-bottom-5'  style="list-style:none;">
+                              <li ng-repeat='states in locations_list | orderBy:orderPro | limitTo: 17' class='margin-bottom-5' ng-click='find_state_func(states)'>
+                                <ul class='list-group margin-bottom-5' style="list-style:none;">
+                                  <li class='margin-bottom-5' ng-repeat='popularCities in states.popular_cities | limitTo: 10' ng-click='setLocation_city_func(popularCities)' >
                                     {{popularCities}}
                                   </li>
                                 </ul>                                  
                               </li>
                             </ul>                            
                           </div>
+                          <div class='col-md-4 small padding-left-null' ng-hide='location_filter'>
+                            <ul class='list-group margin-top-10 margin-bottom-5'  style="list-style:none;">
+                              <li ng-repeat='states in locations_list | orderBy:orderPro | limitTo: 28 | limitTo: -11' class='margin-bottom-5' ng-click='find_state_func(states)'>
+                                <ul class='list-group margin-bottom-5' style="list-style:none;">
+                                  <li class='margin-bottom-5' ng-repeat='popularCities in states.popular_cities | limitTo: 10' ng-click='setLocation_city_func(popularCities)' >
+                                    {{popularCities}}
+                                  </li>
+                                </ul>                                  
+                              </li>
+                            </ul>                            
+                          </div>
+                          <div class='col-md-4 small padding-left-null' ng-hide='location_filter'>
+                            <ul class='list-group margin-top-10 margin-bottom-5'  style="list-style:none;">
+                              <li ng-repeat='states in locations_list | orderBy:orderPro | limitTo:-9' class='margin-bottom-5' ng-click='find_state_func(states)'>
+                                <ul class='list-group margin-bottom-5' style="list-style:none;">
+                                  <li class='margin-bottom-5' ng-repeat='popularCities in states.popular_cities | limitTo: 10' ng-click='setLocation_city_func(popularCities)' >
+                                    {{popularCities}}
+                                  </li>
+                                </ul>                                  
+                              </li>
+                            </ul>                            
+                          </div>
+                          <!-- Whole cities Search -->
                           <div class='col-md-4 padding-left-null small' ng-show='location_filter'>
                             <ul class='list-group margin-top-10' style='list-style:none'>
                               <li ng-repeat='states in locations_list' ng-click='find_state_func(states)'>
@@ -49,10 +73,25 @@
                             </ul>
                           </div>
                         </div>
+                        <!-- ____________States___________________ -->
                         <div class='col-md-5 width-49 margin-left-15 padding-left-null'>
                           <div class='col-md-4 padding-left-null small'>
                             <ul class='list-group margin-top-10' style='list-style:none'>
-                              <li ng-repeat='states in locations_list' class='margin-bottom-5' ng-click='setLocation_state_func(states)'>
+                              <li ng-repeat='states in locations_list | orderBy:state | limitTo:12' class='margin-bottom-5' ng-click='setLocation_state_func(states)'>
+                                {{states.state}}
+                              </li>
+                            </ul>
+                          </div>
+                          <div class='col-md-4 padding-left-null small'>
+                            <ul class='list-group margin-top-10' style='list-style:none'>
+                              <li ng-repeat='states in locations_list | orderBy:state | limitTo:24 | limitTo: -12' class='margin-bottom-5' ng-click='setLocation_state_func(states)'>
+                                {{states.state}}
+                              </li>
+                            </ul>
+                          </div>
+                          <div class='col-md-4 padding-left-null small'>
+                            <ul class='list-group margin-top-10' style='list-style:none'>
+                              <li ng-repeat='states in locations_list | orderBy:state | limitTo:-13' class='margin-bottom-5' ng-click='setLocation_state_func(states)'>
                                 {{states.state}}
                               </li>
                             </ul>
