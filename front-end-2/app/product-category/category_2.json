@@ -1,0 +1,159 @@
+[
+	{
+		"age": 0,
+		"name": "Mobile & Tablets",
+		"subCategory": [
+			"Mobile Phones",
+			"Tablets",
+			"Mobile Accessories"
+		],
+		"imageUrl": "glyphicon glyphicon-phone",
+		"targetId": "paneId0"
+	},
+
+	{
+		"age":1,
+		"name": "Home & Fruniture",
+		"subCategory": [
+			"Furniture",
+			"Decor & Furnishings",
+			"Fridge - AC - Washing Machine",
+			"Home & Kitchen Appliances",
+			"Art - Paintings",
+			"Other Household Goods"
+		],
+		"imageUrl": "glyphicon glyphicon-home",
+		"targetId": "paneId1"
+	},
+	{
+		"age": 2,
+		"name": "Clothes & Accessories",
+		"subCategory": [
+			"Clothes",
+			"Jewellery",
+			"Bags & Luggage",
+			"Footwear",
+			"Clothing Accessories",
+			"Watches"
+		],
+		"imageUrl": "glyphicon glyphicon-user",
+		"targetId": "paneId2"
+	},
+	{
+		"age": 3,
+		"name": "Services",
+		"subCategory": [
+			"Education & Classes",
+			"Electronics - Computers",
+			"Maids & Domestic Help",
+			"Health & Beauty",
+			"Home Improvements & Repairs",
+			"Movers & Packers",
+			"Drivers - Taxi Services",
+			"Car Wash & Repair",
+			"Other Services"
+		],
+		"imageUrl": "glyphicon glyphicon-wrench",
+		"targetId": "paneId3"
+	},
+	{
+		"age":4,
+		"name": "Electronics and Computers",
+		"subCategory": [
+			"Cameras & Accessories",
+			"TV - Video - Audio",
+			"Computers - Laptops",
+			"Computer Accessories",
+			"Video Games - Consoles",
+			"Others Electronics"
+		],
+		"imageUrl": "glyphicon glyphicon-hd-video",
+		"targetId": "paneId4"
+	},
+	{
+		"age":5,
+		"name":"Pets",
+		"subCategory": [
+			"Animals",
+			"Pet Food - Accessories",
+			"Pet Care & Services"
+		],
+		"imageUrl": "glyphicon glyphicon-dog",
+		"targetId": "paneId5"
+
+	},
+	{
+		"age": 6,
+		"name": "Kids & Baby",
+		"subCategory": [
+			"Baby Products & Furniture",
+			"Kids Clothing - Accessories",
+			"Toys & Games",
+			"Kids Health - Nutrition"
+		],
+		"imageUrl": "glyphicon glyphicon-shopping-cart",
+		"targetId": "paneId6"
+	},
+	{
+		"age": 7,
+		"name": "Jobs",
+		"subCategory": [
+			"Job Offers",
+			"Resumes"
+		],
+		"imageUrl": "glyphicon glyphicon-user",
+		"targetId": "paneId7"
+	},
+	{
+		"age": 8,
+		"name": "Vehicles",
+		"subCategory": [
+			"Cars",
+			"Motorcycles - Scooters",
+			"Bicycles",
+			"Commercial - Transportation",
+			"Spare Parts - Accessories",
+			"Tractors - Agricultural Equipments"
+		],
+		"imageUrl": "glyphicon glyphicon-car",
+		"targetId": "paneId8"
+	},
+	{
+		"age": 9,
+		"name": "Books, CDs & Hobbies",
+		"subCategory": [
+			"Books & Magazines",
+			"CDs - DVDs",
+			"Musical Instruments",
+			"Coins & Collectibles",
+			"Handicrafts"
+		],
+		"imageUrl": "glyphicon glyphicon-book",
+		"targetId": "paneId9"
+	},
+	{
+		"age": 10,
+		"name": "Sports & Health",
+		"subCategory": [
+			"Sport Equipment",
+			"Gym & Fitness",
+			"Health & Beauty"
+		],
+		"imageUrl": "glyphicon glyphicon-baseball",
+		"targetId": "paneId10"
+	},
+	{
+		"age": 11,
+		"name": "Real Estate",
+		"subCategory": [
+			"Houses - Apartments for Sale",
+			"Houses - Apartments for Rent",
+			"Land - Plots For Sale",
+			"Office – Commercial Space",
+			"PG & Roommates",
+			"Vacation Rentals – Guest Houses"
+		],
+		"imageUrl": "glyphicon glyphicon-stats",
+		"targetId": "paneId11"
+	}
+]

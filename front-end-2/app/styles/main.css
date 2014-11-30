@@ -1,3 +1,5 @@
+ul.nav li.dropdown:hover ul.dropdown-menu { display: block; }
+
 /* Space out content a bit */
 body {
   padding-top: 0px;
@@ -95,14 +97,33 @@ body {
 
 /*--------------------------------------------------------------*/
 
+ .simple-form input.ng-invalid.ng-dirty {
+    background-color: #FA787E;
+  }
+
+  .simple-form input.ng-valid.ng-dirty {
+    background-color: #78FA89;
+  }
+
+  .btn-default:hover {
+    background-color: #D9D427;
+  }
+  .btn-default:active  {
+  outline:0;
+  color: #fff;
+  background-color: #C4E;
+  border-color: #357ebd;
+}
+/*---------------------------------------------------------------*/
+
 .nav-container-margin{
   max-width: 80%;
 }
-.collapse button{
+.submit_button{
   
-  width: 100%;
+
   position: relative;
-  margin-top: 14px;
+
   background-color: #60b044;
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
@@ -112,17 +133,20 @@ body {
   background-image: linear-gradient(#8add6d, #60b044);
   background-repeat: repeat-x;
   border-color: #5ca941;
-  font-size: 23px !important;
+
 }
 
 .navbar {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 .navbar h1{
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: 40px;
+  font-size: 33px;
+}
+.your-location-header{
+  font-size: 15px;
 }
 .font-size-10{
   font-size: 10px;
@@ -163,6 +187,9 @@ body {
 }
 .padding-left-null {
   padding-left: 0px;
+}
+.padding-top-null{
+  padding-top:0px;
 }
 .padding-top-5{
   padding-top: 5px;
@@ -217,6 +244,9 @@ body {
 }
 .margin-left-null{
   margin-left: 0px;
+}
+.margin-right-10{
+  margin-right: 10px;
 }
 .margin-right-15{
   margin-right: 15px;
@@ -383,9 +413,13 @@ body {
 }
 .overflow-hiden{
   overflow: hidden;
+  width: 100%;
+  font-weight: bold;
+   background: rgba(150,225,150,0.5);
+}
+.position-reletive{
   position: relative;
 }
-
 /*-------------------------product-detail.html--------------------------------*/
 .mini-image-panel{
   height: 60px;

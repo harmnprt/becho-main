@@ -51,7 +51,7 @@
                           </div>
                           <div class='col-md-4 small padding-left-null' ng-hide='location_filter'>
                             <ul class='list-group margin-top-10 margin-bottom-5'  style="list-style:none;">
-                              <li ng-repeat='states in locations_list | orderBy:orderPro | limitTo:-9' class='margin-bottom-5' ng-click='find_state_func(states)'>
+                              <li class='margin-bottom-5' ng-repeat='states in locations_list | orderBy:orderPro | limitTo:-9' ng-click='find_state_func(states)'>
                                 <ul class='list-group margin-bottom-5' style="list-style:none;">
                                   <li class='margin-bottom-5' ng-repeat='popularCities in states.popular_cities | limitTo: 10' ng-click='setLocation_city_func(popularCities)' >
                                     {{popularCities}}
@@ -60,6 +60,7 @@
                               </li>
                             </ul>                            
                           </div>
+                          
                           <!-- Whole cities Search -->
                           <div class='col-md-4 padding-left-null small' ng-show='location_filter'>
                             <ul class='list-group margin-top-10' style='list-style:none'>

@@ -20,3 +20,8 @@ app.factory('sellingItem', ['$resource', function ($resource) {
 		query: {method: 'GET', params:{addId: 'adds-list.json'}, isArray: true}
 	});
 }]);
+
+app.factory('postAddMeth', ['$resource', function($resource){
+	return $resource('/postNewAdd', {}, { post: {method: 'POST', isArray:false}
+	});
+}]);

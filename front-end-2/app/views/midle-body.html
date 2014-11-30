@@ -2,7 +2,7 @@
   <div class='row' ng-controller='MidleCtrl'>
     <div class='container'>
       <div class='col-md-8' style='border:2px solid green;'>
-        <div class='row margin-right-null margin-bottom-20'>
+        <div class='row margin-bottom-20'>
           <div class='panel-group' id='accordion2'>
             <!-- First Search pannel -->
             <div class='panel'> 
@@ -12,7 +12,7 @@
                     <span class='panel-title font-color-black font-size-24'>
                       Find ads in <strong>India</strong>  
                       <small>
-                        <span class='btn-link font-size-15' aria-hidden='true' data-toggle='collapse' data-parent='#topParent' data-target='#collapse2'>
+                        <span class='btn-link font-size-15' data-toggle='collapse' data-parent='#topParent' data-target='#collapse2'>
                           {{selected_location}}
                           <!-- <span ng-show='null'>Chose your location</span> -->
                           
@@ -44,13 +44,17 @@
               </div>
               <div class='panel-body'>
                 <div class='row'>
-                    <div class='col-md-4'> 
-                    <div class='media'>
+                    <!-- <div class='col-md-4'> 
+                      <div class='media'>
                           <a href="#" class='btn btn-lg pull-left'>
                             <span class='glyphicon glyphicon-phone'></span>
                           </a>
                           <div class='media-body'>
-                            <a href="#/products"><strong class='front-items-heading-color font-size-16'>Mobiles & tablets</strong></h4></a>
+                            <a href="#/products">
+                              <strong class='front-items-heading-color font-size-16'>
+                                Mobiles & tablets
+                              </strong>
+                            </a>
                             <span class='cat-counter disabled'>11111 ads</span>
                             <ul class='list-group'>
                               <li><a href="">Mobile Phones</a></li>
@@ -58,10 +62,39 @@
                               <li><a href="">Mobile Accessories</a></li>
                             </ul>
                           </div>
-                        </div>             
+                      </div>             
+                    </div> -->
+                    <div class='col-md-4'>
+                      <div class='row'>
+                        <ul class='style-none'>
+                          <li ng-repeat='category in categories | limitTo:4'  class='padding-top-5 margin-right-10 margin-bottom-15 '>
+                            <div class='media btn-default'>
+                              <div class='col-md-4'>
+                                <a href="" class='product-list-glyphicon'>
+                                  <span class='{{category.imageUrl}}'></span>
+                                </a>
+                              </div>
+                              <div class='col-md-8 padding-left-null padding-right-null'>
+                                <div class='media-body'>
+                                  <a href="#/products">
+                                    <strong class='front-items-heading-color font-size-16'>
+                                      {{category.name}}
+                                    </strong>
+                                  </a>
+                                  <ul class='list-group'>
+                                    <li ng-repeat='list in category.subCategory'>
+                                      <a href="">{{list}}</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>                              
+                            </div>          
+                          </li>
+                        </ul>                        
+                      </div>
                     </div>
                     <!-- ************************************************* -->
-                    <div class='col-md-4'> 
+                    <!-- <div class='col-md-4'> 
                       <div class='row'>
                         <ul class='style-none'>
                           <li ng-repeat='category in categories' style='' class='padding-top-5 margin-right-15 margin-bottom-15 btn-link padding-bottom-5'>
@@ -83,19 +116,48 @@
                           </li>
                         </ul>
                       </div>               
-                    </div>
-                    <!-- **************************************************** -->
+                    </div> -->
                     <div class='col-md-4'>
                       <div class='row'>
                         <ul class='style-none'>
-                          <li ng-repeat='category in categories'  class='padding-top-5 margin-right-15 margin-bottom-15 '>
+                          <li ng-repeat='category in categories | limitTo:8 | limitTo:-4'  class='padding-top-5 margin-right-10 margin-bottom-15 '>
                             <div class='media btn-default'>
                               <div class='col-md-4'>
                                 <a href="" class='product-list-glyphicon'>
                                   <span class='{{category.imageUrl}}'></span>
                                 </a>
                               </div>
-                              <div class='col-md-8 padding-left-null'>
+                              <div class='col-md-8 padding-left-null padding-right-null'>
+                                <div class='media-body'>
+                                  <a href="#/products">
+                                    <strong class='front-items-heading-color font-size-16'>
+                                      {{category.name}}
+                                    </strong>
+                                  </a>
+                                  <ul class='list-group'>
+                                    <li ng-repeat='list in category.subCategory'>
+                                      <a href="">{{list}}</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>                              
+                            </div>          
+                          </li>
+                        </ul>                        
+                      </div>
+                    </div>
+                    <!-- **************************************************** -->
+                    <div class='col-md-4'>
+                      <div class='row'>
+                        <ul class='style-none'>
+                          <li ng-repeat='category in categories | limitTo:-4'  class='padding-top-5 margin-right-10 margin-bottom-15 '>
+                            <div class='media btn-default'>
+                              <div class='col-md-4'>
+                                <a href="" class='product-list-glyphicon'>
+                                  <span class='{{category.imageUrl}}'></span>
+                                </a>
+                              </div>
+                              <div class='col-md-8 padding-left-null padding-right-null'>
                                 <div class='media-body'>
                                   <a href="#/products">
                                     <strong class='front-items-heading-color font-size-16'>
@@ -149,69 +211,66 @@
               </div>
               
             </div>
-            <div class='panel-body'>
-               <div class='col-md-5 width-48 padding-left-null' >
-                <div class='col-md-6 small'>
-                  <ul class='list-group' style='list-style:none;'>
-                    <li><a href="">Delhi</a></li>
-                    <li><a href="">Moga</a> </li>
-                  </ul>
-                </div>
-                <div class='col-md-6 small'>
-                  <ul class='list-group' style='list-style:none;'>
-                    <li><a href="">new delhi</a></li>
-                    <li><a href="">Moga</a> </li>
-                  </ul>
-                </div>
-               </div>
-                <div class='col-md-5 width-49 margin-left-15 padding-left-null'>
+            <div class='panel-body font-color-blue'>
+              <div class='col-md-5 width-48 padding-left-null' >
+                          <!-- Popular Cities -->
+                          <div class='col-md-4 small padding-left-null' ng-hide='location_filter'>
+                            <ul class='list-group margin-top-10 margin-bottom-5'  style="list-style:none;">
+                              <li ng-repeat='states in locations_list | orderBy:orderPro | limitTo: 17' class='margin-bottom-5' ng-click='find_state_func(states)'>
+                                <ul class='list-group margin-bottom-5' style="list-style:none;">
+                                  <li class='margin-bottom-5' ng-repeat='popularCities in states.popular_cities | limitTo: 10' ng-click='setLocation_city_func(popularCities)' >
+                                    {{popularCities}}
+                                  </li>
+                                </ul>                                  
+                              </li>
+                            </ul>                            
+                          </div>
+                          <div class='col-md-4 small padding-left-null' ng-hide='location_filter'>
+                            <ul class='list-group margin-top-10 margin-bottom-5'  style="list-style:none;">
+                              <li ng-repeat='states in locations_list | orderBy:orderPro | limitTo: 28 | limitTo: -11' class='margin-bottom-5' ng-click='find_state_func(states)'>
+                                <ul class='list-group margin-bottom-5' style="list-style:none;">
+                                  <li class='margin-bottom-5' ng-repeat='popularCities in states.popular_cities | limitTo: 10' ng-click='setLocation_city_func(popularCities)' >
+                                    {{popularCities}}
+                                  </li>
+                                </ul>                                  
+                              </li>
+                            </ul>                            
+                          </div>
+                          <div class='col-md-4 small padding-left-null' ng-hide='location_filter'>
+                            <ul class='list-group margin-top-10 margin-bottom-5'  style="list-style:none;">
+                              <li class='margin-bottom-5' ng-repeat='states in locations_list | orderBy:orderPro | limitTo:-9' ng-click='find_state_func(states)'>
+                                <ul class='list-group margin-bottom-5' style="list-style:none;">
+                                  <li class='margin-bottom-5' ng-repeat='popularCities in states.popular_cities | limitTo: 10' ng-click='setLocation_city_func(popularCities)' >
+                                    {{popularCities}}
+                                  </li>
+                                </ul>                                  
+                              </li>
+                            </ul>                            
+                          </div>
+              </div>
+              <div class='col-md-5 width-49 margin-left-15 padding-left-null'>
                   <div class='col-md-4 small'>
                     <ul class='list-group ' style='list-style:none;'>
-                      <li><a href="">Delhi</a></li>
-                      <li><a href="">Moga</a> </li>
-                      <li><a href="">Delhi</a></li>
-                      <li><a href="">punjab</a> </li>
-                      <li><a href="">rajastan</a></li>
-                      <li><a href="">bomby</a></li>
-                      <li><a href="">kerala</a></li>
-                      <li><a href="">bangluru</a></li>
-                      <li><a href="">rajastan</a></li>
-                      <li><a href="">bomby</a></li>
-                      <li><a href="">kerala</a></li>
-                      <li><a href="">bangluru</a></li>
+                      <li class='margin-bottom-5' ng-repeat='locations_states in locations_list | limitTo:12' ng-click='setLocation_state_func(locations_states)'>
+                        {{locations_states.state}}
+                      </li>
                     </ul>
                   </div>
-                   <div class='col-md-4 small'>
+                  <div class='col-md-4 small'>
                     <ul class='list-group ' style='list-style:none;'>
-                      <li><a href="">Delhi</a></li>
-                      <li><a href="">Moga</a> </li>
-                      <li><a href="">Delhi</a></li>
-                      <li><a href="">punjab</a> </li>
-                      <li><a href="">rajastan</a></li>
-                      <li><a href="">bomby</a></li>
-                      <li><a href="">kerala</a></li>
-                      <li><a href="">bangluru</a></li>
-                      <li><a href="">rajastan</a></li>
-                      <li><a href="">bomby</a></li>
-                      <li><a href="">kerala</a></li>
-                      <li><a href="">bangluru</a></li>
+                      <li ng-repeat='locations_states in locations_list | limitTo:24 | limitTo:-12' ng-click='setLocation_state_func(locations_states)'>
+                        {{locations_states.state}}
+                      </li>
                     </ul>
                   </div>
-                   <div class='col-md-4 small'>
+                  <div class='col-md-4 small'>
                     <ul class='list-group ' style='list-style:none;'>
-                      <li><a href="">Delhi</a></li>
-                      <li><a href="">punjab</a> </li>
-                      <li><a href="">rajastan</a></li>
-                      <li><a href="">bomby</a></li>
-                      <li><a href="">kerala</a></li>
-                      <li><a href="">bangluru</a></li>
-                      <li><a href="">rajastan</a></li>
-                      <li><a href="">bomby</a></li>
-                      <li><a href="">kerala</a></li>
-                      <li><a href="">bangluru</a></li>
+                      <li ng-repeat='locations_states in locations_list | limitTo:-13' ng-click='setLocation_state_func(locations_states)'>
+                        {{locations_states.state}}
+                      </li>
                     </ul>
                   </div>
-                </div>
+              </div>
             </div>
           </div>
         </div>

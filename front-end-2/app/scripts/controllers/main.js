@@ -3,13 +3,19 @@ console.log('main.js');
 
 var app = angular.module('appControllers', []);
 
-app.controller('MainCtrl', ['$scope', '$rootScope', 'setLocation', 
-  function ($scope, $rootScope, setLocation) {
+app.controller('MainCtrl', ['$scope', '$rootScope', 'Category', 'setLocation', 
+  function ($scope, $rootScope, Category, setLocation) {
     $scope.name = 'harman';
     console.log('main.js > MainCtrl');
+    $rootScope.categories = Category.query();
+    console.log('categories list');
+    console.log(Category.query());
+
+
+    //----------location section--------
     $rootScope.locations_list = setLocation.query();
     console.log(setLocation.query());
-    $rootScope.selected_location = 'Chose your Location';
+    $rootScope.selected_location = 'Your Location';
     $scope.setLocation_state_func = function (selected_location) {
           $rootScope.selected_location = selected_location.state;
           console.log(selected_location);
@@ -25,56 +31,56 @@ app.controller('MainCtrl', ['$scope', '$rootScope', 'setLocation',
     $rootScope.orderPro = 'popular_cities';
 
   }])
-    .controller('MidleCtrl', ['$scope','Category', 'setLocation', 
-      function($scope, Category, setLocation){
-        $scope.categories = Category.query();
-        console.log('categories list');
-        console.log(Category.query());
+    .controller('MidleCtrl', ['$scope', 
+      function($scope){
         $scope.name='new World';
   }])
     .controller('ProductsCtrl', ['$scope', 'sellingItem', function($scope, sellingItem){
       $scope.adds_list = sellingItem.query();
   }])
-    .controller('postYourAdds', ['$scope', 'Category','$fileUploader', '$http', 
-      function ($scope, Category, $fileUploader, $http){
-        $scope.categories = Category.query();
-        $scope.queue= [1,2,3,4,5,6]
-        var data = {txt: 'new text'}
-        $http.post('/this', data)
-        .success(function(data){
-          console.log(data + success);
-        })
-        .error(function(){
-          console.log('error occured');
-        });
+    .controller('postYourAdds', ['$scope', 'FileUploader', '$http', 'postAddMeth', 
+      function ($scope, FileUploader, $http, postAddMeth){
 
-        console.log($fileUploader);
-        var uploader = $scope.uploader = $fileUploader.create({
+        $scope.userData = {};
+        $scope.userData.typeOfAdd = 'iWantToSell';
+        $scope.userData.typeOfPrice = 'fixedPrice';
+        $scope.userData.privacyOfNumber = 'ShowNumber';
+        // console.log($scope.userData.typeOfAdd);
+        console.log($scope.userData);
+
+        $scope.postNewAddFunc = function(){
+          postAddMeth.post($scope.userData);
+          console.log($scope.userData);
+        }
+
+        // $scope.queue= [1,2,3,4,5,6];
+
+        // var data = {txt: 'new text'};
+        
+        // $http.post('/upload', uploader)
+        // .success(function(data){
+        //   console.log(data + 'success');
+        // })
+        // .error(function(){
+        //   console.log('error occured');
+        // });
+
+
+        var uploader = $scope.uploader = new FileUploader({
           scope: $scope,
           url: '/upload',
+          method:'POST',
           alias: 'myfoto',
           formData: [
             {key: 'value'},
             {key2: 'value2'}
           ],
-          filters: [
-            function() {                    // A user-defined filter
-              console.info('filter1');
-              return true;
-            }
-          ],
-          queueLimit: 12
-        });
-
-        uploader.filters.push(function (item){
-          var type = uploader.isHTML5 ? item.type : '/' + item.value.slice(item.value.lastIndexOf('.'));
-          type = '|' + type.toLowerCase().slice(type.lastIndexOf('/') + 1) + '|';
-          return '|jpg|png|jpeg|bmp|gif|'.indexOf(type) !== -1;
+          autoUpload: true,
+          queueLimit: 6
         });
 
 
-
-
+        // console.log(uploader);
         // var item = {
 
         //   file: {
@@ -93,58 +99,51 @@ app.controller('MainCtrl', ['$scope', '$rootScope', 'setLocation',
         // uploader.queue.push(item);
         // uploader.progress = 100;
 
-        //ADDING FILTERS
+        // FILTERS
 
-        uploader.filters.push(function(){
-          console.info('filters2');
-          return true;
+        uploader.filters.push({
+            name: 'imageFilter',
+            fn: function(item /*{File|FileLikeObject}*/, options) {
+                var type = '|' + item.type.slice(item.type.lastIndexOf('/') + 1) + '|';
+                return '|jpg|png|jpeg|bmp|gif|'.indexOf(type) !== -1;
+            }
         });
 
-        // REGISTER HANDLERS
+        // CALLBACKS
 
-        uploader.bind('afteraddingfile', function (event, item){
-          console.info('After Adding a file', item);
-        });
-
-        uploader.bind('whenaddingfilefailed', function (event, item){
-          console.info('When adding a File failed', item);
-        });
-
-        uploader.bind('afteraddingall', function (event, items){
-          console.info('After adding all files', items);
-        });
-
-        uploader.bind('beforeupload', function (event, items){
-          console.info('Befor Upload', items);
-        });
-
-        uploader.bind('progress', function (event, item, progress){
-          console.info('Progress' + progress, item);
-        });
-
-        uploader.bind('success', function (event, xhr, item, response){
-          console.info('Success', xhr, item, response);
-        });
-
-        uploader.bind('cancel', function (event, xhr, item){
-          console.info('Cancel', xhr, item);
-        });
-
-        uploader.bind('error', function (event, xhr, item, response){
-          console.info('Error', xhr, item, response);
-        });
-
-        uploader.bind('complete', function (event, xhr, item, response){
-          console.info('Complete', xhr, item, response);
-        });
-
-        uploader.bind('progressall', function (event, progress){
-          console.info('Total Progrss' + progress);
-        });
-
-        uploader.bind('completeall', function (event, items){
-          console.info('Complete all', items);
-        });
+        uploader.onWhenAddingFileFailed = function(item /*{File|FileLikeObject}*/, filter, options) {
+            console.info('onWhenAddingFileFailed', item, filter, options);
+        };
+        uploader.onAfterAddingFile = function(fileItem) {
+            console.info('onAfterAddingFile', fileItem);
+        };
+        uploader.onAfterAddingAll = function(addedFileItems) {
+            console.info('onAfterAddingAll', addedFileItems);
+        };
+        uploader.onBeforeUploadItem = function(item) {
+            console.info('onBeforeUploadItem', item);
+        };
+        uploader.onProgressItem = function(fileItem, progress) {
+            console.info('onProgressItem', fileItem, progress);
+        };
+        uploader.onProgressAll = function(progress) {
+            console.info('onProgressAll', progress);
+        };
+        uploader.onSuccessItem = function(fileItem, response, status, headers) {
+            console.info('onSuccessItem', fileItem, response, status, headers);
+        };
+        uploader.onErrorItem = function(fileItem, response, status, headers) {
+            console.info('onErrorItem', fileItem, response, status, headers);
+        };
+        uploader.onCancelItem = function(fileItem, response, status, headers) {
+            console.info('onCancelItem', fileItem, response, status, headers);
+        };
+        uploader.onCompleteItem = function(fileItem, response, status, headers) {
+            console.info('onCompleteItem', fileItem, response, status, headers);
+        };
+        uploader.onCompleteAll = function() {
+            console.info('onCompleteAll');
+        };
 
     }])
     .controller('ProductsDetailCtrl', ['$scope', '$routeParams', 'sellingItem',
